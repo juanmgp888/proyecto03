@@ -1,5 +1,5 @@
 package es.santander.ascender.proyecto03;
-
+// Calculadora de números enteros
 public class Calculadora {
     public long sumar(long sumando1, long sumando2) {
         return sumando1 + sumando2;
