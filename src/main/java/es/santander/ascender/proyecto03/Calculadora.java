@@ -25,16 +25,17 @@ public class Calculadora {
         // la variable del objeto se definió arriba: calculadora
         for (int i=0;i<=10;i++)
         {
-            System.out.println(i*numero);
+            System.out.println(i*numero);  // Lo habitual será un return(i*numero), creo
            // System.out.println(i+" * "+numero+" = "+(i*numero));
         }
     }
-    public void calcularTablaMultiplicar(int numero){
-        int[] resultados = null; 
+    public int[] calcularTablaMultiplicar(int numero){
+      
         int[] borrame = new int[11]; // crea una variable de tipo array y crea 12 espacios
-        borrame[0]=3;
-        borrame[4]=6;
-        borrame[7]=borrame[0]+borrame[4]; //Copia los contenidos de las celdas de memoria de esos índices.
-
+        for (int i=0;i<=10;i++){
+            borrame[i]=(i*numero);
+       //     System.out.println(borrame[i]);
+        }
+        return borrame;
     }
 }

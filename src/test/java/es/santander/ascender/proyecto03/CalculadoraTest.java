@@ -1,8 +1,8 @@
 package es.santander.ascender.proyecto03;
 
-//import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
-//import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.junit.jupiter.api.Assertions.fail;
 
 import org.junit.jupiter.api.Test;
@@ -45,7 +45,7 @@ public class CalculadoraTest {
     @Test
     public void testDividirPorCero() {
         try{
-            long resultado = calculadora.dividir(8,0);
+   //         long resultado = calculadora.dividir(8,0);
           //  assertEquals(2,resultado);
             fail("Debería haber lanzado un error de división por cero.");
             
@@ -66,10 +66,15 @@ public class CalculadoraTest {
     // Ver resultado por la consola de debug    
         calculadora.presentarTablaMultiplicar(6);
     }
-
     @Test
     public void testCalcularTablaDeMultiplicar(){
-        calculadora.calcularTablaMultiplicar(5);
-
+        // Al principio de esta clase hemos creado instancia: Calculadora calculadora = new Calculadora();
+        
+        // Ahora llamamos a su método
+        // borrame es un método local, por lo que no es accesible desde el archivo de test tal cual.
+        // Así que o la defino aquí o pongo un return en el método de su clase. int[]= y la llamada al método.
+        int[] borrame = calculadora.calcularTablaMultiplicar(5);
+        // Finalmente buscamos la forma de verificar resultados mediante Assertions
+        assertArrayEquals(new int[]{0,5,10,15,20,25,30,35,40,45,50}, borrame, "No es correcta esa tabla");
     }
 }
