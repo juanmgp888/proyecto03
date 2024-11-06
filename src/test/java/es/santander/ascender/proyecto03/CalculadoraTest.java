@@ -3,6 +3,7 @@ package es.santander.ascender.proyecto03;
 //import static org.junit.jupiter.api.Assertions.assertArrayEquals;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 //import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.fail;
 
 import org.junit.jupiter.api.Test;
 
@@ -36,10 +37,23 @@ public class CalculadoraTest {
         long resultado = calculadora.multiplicar(8,3);
         assertEquals(24,resultado);
     }
-
     @Test
     public void testDividir() {
         long resultado = calculadora.dividir(8,3);
         assertEquals(2,resultado);
+    }
+    @Test
+    public void testDividirPorCero() {
+        try{
+            long resultado = calculadora.dividir(8,0);
+          //  assertEquals(2,resultado);
+            fail("Debería haber lanzado un error de división por cero.");
+            
+        } catch (Exception e){
+            // Código. Clase para tratar las excepciones.
+            // El nombre de esas clases llevan por sufijo: exception
+            System.out.println(e);
+        }
+
     }
 }

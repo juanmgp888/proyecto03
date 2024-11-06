@@ -16,4 +16,7 @@ public class Calculadora {
     public long dividir(long dividendo, long divisor) {
         return dividendo / divisor;
     }
+    public long dividirPorCero(long dividendo, long divisor) {
+        return dividendo / 0;
+    }
 }
