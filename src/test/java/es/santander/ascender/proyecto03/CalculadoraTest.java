@@ -56,4 +56,14 @@ public class CalculadoraTest {
         }
 
     }
+
+    @Test
+    // Tabla de multiplicar
+    public void testPresentarTablaMultiplicar(){
+    // Como es void, no arroja ningún resultado. 
+    // No creamos una variable para alamcenar el resultado.
+    // Llamamos al método.
+    // Ver resultado por la consola de debug    
+        calculadora.presentarTablaMultiplicar(6);
+    }
 }
