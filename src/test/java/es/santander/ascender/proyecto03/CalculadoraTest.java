@@ -66,4 +66,10 @@ public class CalculadoraTest {
     // Ver resultado por la consola de debug    
         calculadora.presentarTablaMultiplicar(6);
     }
+
+    @Test
+    public void testCalcularTablaDeMultiplicar(){
+        calculadora.calcularTablaMultiplicar(5);
+
+    }
 }

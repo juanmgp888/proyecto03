@@ -29,4 +29,12 @@ public class Calculadora {
            // System.out.println(i+" * "+numero+" = "+(i*numero));
         }
     }
+    public void calcularTablaMultiplicar(int numero){
+        int[] resultados = null; 
+        int[] borrame = new int[11]; // crea una variable de tipo array y crea 12 espacios
+        borrame[0]=3;
+        borrame[4]=6;
+        borrame[7]=borrame[0]+borrame[4]; //Copia los contenidos de las celdas de memoria de esos índices.
+
+    }
 }
