@@ -45,14 +45,14 @@ public class CalculadoraTest {
     @Test
     public void testDividirPorCero() {
         try{
-   //         long resultado = calculadora.dividir(8,0);
+            long resultado = calculadora.dividir(8,0);
           //  assertEquals(2,resultado);
             fail("Debería haber lanzado un error de división por cero.");
             
         } catch (Exception e){
             // Código. Clase para tratar las excepciones.
             // El nombre de esas clases llevan por sufijo: exception
-            System.out.println(e);
+            System.out.println("Esto es un mensaje de error. Ha habido un intento de división por cero. "+e);
         }
 
     }
